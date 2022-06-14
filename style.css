@@ -21,8 +21,9 @@ body{
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
-    padding: 100px 200px 100px 200px;
+    padding: 50px 150px 50px 150px;
     gap: 70px;
+    
 }
 .left h1{
   font-size: 50px;
@@ -35,20 +36,24 @@ body{
 }
 form{
     background-color: white;
-    padding: 50px;
+    padding: 40px;
     border-radius: 10px;
     width: 100%;
     height: 100%;
     box-shadow: 0 7px 0 0 rgba(0,0,0,0.2);
+    position: relative;
 }
-.right, .left{
+.left{
+    width: 80%;
+}
+.right{
     width:100%;
 }
 .right .form_head{
     text-align: center;
     background-color: var(--blue-accent);
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 7px 0 0 rgba(0,0,0,0.2);
 }
@@ -58,7 +63,6 @@ form{
 form input{
     width: 100%;
     height: 60px;
-    margin-bottom: 20px;
     border: 1px solid lightgrey;
     border-radius: 5px;
     padding-left: 20px;
@@ -76,6 +80,10 @@ form button{
     font-weight: 500;
     box-shadow: 0 4px 0 0  hsl(154, 65%, 34%, 0.7);
 }
+form button:hover{
+    cursor: pointer;
+    background-color: hsl(154, 59%, 51%, 0.7);
+}
 form p{
     color: var(--grayish-blue);
     font-size: 12px;
@@ -84,4 +92,134 @@ form p{
 }
 form p span{
     color: var(--red);
+}
+
+/* Validation styles */
+form .one{
+    position: absolute;
+    top: 60px;
+    right: 70px; 
+    visibility: hidden;  
+}
+form .two{
+    position: absolute;
+    top: 160px;
+    right: 70px;
+    visibility: hidden;
+}
+form .three{
+    position: absolute;
+    top: 260px;
+    right: 70px;
+    visibility: hidden;
+}
+form .four{
+    position: absolute;
+    top: 360px;
+    right: 70px;
+    visibility: hidden;
+}
+form small{
+    color: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 20px;
+    visibility: hidden;
+}
+form .email_error{
+    position: absolute;
+    justify-content: start;
+    bottom: 80px;
+    top: 255px;
+    padding-left: 30px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--red);
+    visibility: hidden;
+}
+.form.error input{
+    
+    border: 2px solid var(--red);
+}
+.form.error small{
+    visibility: visible;
+}
+.form.error span{
+    visibility: visible;
+}
+.form.error .img{
+    visibility: visible;
+}
+.form.success input{
+    border-color: var(--green);
+}
+.form.success small{
+    visibility: hidden;
+}
+.form.success span{
+    visibility: hidden;
+}
+.form.error ::-webkit-input-placeholder {
+    color:    #fff;
+}
+
+/* media Queries */
+@media screen and (max-width:1024px){
+    body{
+        padding: 50px 100px;
+    }
+    .left h1{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    body{
+        padding: 50px;
+    }
+    .left h1{
+        font-size: 35px;
+    }
+    form input{
+        height: 50px;
+    }
+    button{
+        height: 45px
+    }
+}
+
+@media screen and (max-width: 500px){
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .left{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 375px){
+    body{
+        background-image: url(./images/bg-intro-mobile.png);
+        padding: 100px 50px;
+    }
+    .left h1{
+        font-size: 30px;
+        line-height: 35px;
+    }
+    form{
+        padding: 30px;
+    }
+    form small{
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+    form button{
+        font-size: 13px;
+        height: 40px;
+    }
+    form p{
+        font-size: 10px;
+    }
+    
 }
