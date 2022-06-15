@@ -6,11 +6,12 @@ const password = document.getElementById('password');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-
     checkInputs();
+
 });
 
 function checkInputs() {
+    
 
    const firstnameValue = firstname.value.trim();
    const lastnameValue = lastname.value.trim();
