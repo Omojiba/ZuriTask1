@@ -178,7 +178,7 @@ form .four{
 
 @media screen and (max-width: 768px){
     body{
-        padding: 50px;
+        padding: 30px;
     }
     .left h1{
         font-size: 35px;
@@ -203,6 +203,7 @@ form .four{
     body{
         display: flex;
         flex-direction: column;
+        padding: 70px 20px 50px 20px;
     }
     .left{
         text-align: center;
@@ -221,7 +222,7 @@ form .four{
 @media screen and (max-width: 375px){
     body{
         background-image: url(./images/bg-intro-mobile.png);
-        padding: 100px 50px;
+        padding: 70px 20px 50px 20px;
     }
     .left h1{
         font-size: 30px;
