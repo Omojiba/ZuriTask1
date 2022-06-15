@@ -20,9 +20,9 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-items: center;
-    padding: 50px 150px 50px 150px;
-    gap: 70px;
+    justify-content: center;
+    padding: 70px 200px 30px 150px;
+    gap: 60px;
     
 }
 .left h1{
@@ -33,6 +33,7 @@ body{
 .left p{
     font-weight: 400;
     font-size: 16px;
+    width: 90%;
 }
 form{
     background-color: white;
@@ -43,9 +44,7 @@ form{
     box-shadow: 0 7px 0 0 rgba(0,0,0,0.2);
     position: relative;
 }
-.left{
-    width: 80%;
-}
+
 .right{
     width:100%;
 }
@@ -60,7 +59,7 @@ form{
 .form_head span{
     font-weight: 700;
 }
-form input{
+.form input{
     width: 100%;
     height: 60px;
     border: 1px solid lightgrey;
@@ -99,35 +98,32 @@ form .one{
     position: absolute;
     top: 60px;
     right: 70px; 
-    visibility: hidden;  
+     
 }
 form .two{
     position: absolute;
     top: 160px;
     right: 70px;
-    visibility: hidden;
 }
 form .three{
     position: absolute;
     top: 260px;
     right: 70px;
-    visibility: hidden;
 }
 form .four{
     position: absolute;
     top: 360px;
     right: 70px;
-    visibility: hidden;
 }
-form small{
+.form small{
     color: var(--red);
     display: flex;
     align-items: center;
     justify-content: end;
-    margin-bottom: 20px;
-    visibility: hidden;
+    visibility: collapse;
+    margin-bottom: 20px;  
 }
-form .email_error{
+.form .email_error{
     position: absolute;
     justify-content: start;
     bottom: 80px;
@@ -137,6 +133,9 @@ form .email_error{
     font-weight: 600;
     color: var(--red);
     visibility: hidden;
+}
+.form img{
+    visibility: collapse;
 }
 .form.error input{
     
@@ -148,7 +147,7 @@ form .email_error{
 .form.error span{
     visibility: visible;
 }
-.form.error .img{
+.form.error img{
     visibility: visible;
 }
 .form.success input{
@@ -180,6 +179,11 @@ form .email_error{
     }
     .left h1{
         font-size: 35px;
+        text-align: center;
+    }
+    .left p{
+        width: 100%;
+        text-align: center;
     }
     form input{
         height: 50px;
@@ -196,6 +200,13 @@ form .email_error{
     }
     .left{
         text-align: center;
+    }
+    .left h1{
+        line-height: 35px;
+        text-align: center;
+    }
+    .left p{
+        width: 100%;
     }
 }
 @media screen and (max-width: 375px){

@@ -64,3 +64,8 @@ function setSuccessFor(input){
     formControl.className = 'form success';
 }
 
+function myFunction() {
+    const element = document.getElementById("email-example");
+    
+    element.remove();
+  }
